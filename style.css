@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5; /* Light gray background for the whole page */
+  padding: 20px;
+}
+
+.todo-grid,
+.todo-input-grid {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.todo-input-grid {
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+
+.name-input,
+.due-date-input {
+  font-size: 15px;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-todo-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-todo-button:hover {
+  background-color: #218838;
+}
+
+.delete-todo-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.delete-todo-button:hover {
+  background-color: #c82333;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.clear-todo-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: none;
+  transition: background-color 0.3s;
+}
+
+.clear-todo-button:hover {
+  background-color: #5a6268;
+}
+
+/* New styling for individual todo items */
+.js-todo-list > div {
+  display: grid;
+  grid-template-columns: 1fr 150px 100px;
+  gap: 10px;
+  align-items: center;
+  background-color: #ffffff; /* White card background */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.js-todo-list > div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
